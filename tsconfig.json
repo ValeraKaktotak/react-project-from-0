@@ -28,7 +28,7 @@
 		"allowSyntheticDefaultImports": true,
 		//используем привычный import вместо require(common js)
 		"esModuleInterop": true,
-		"baseUrl": "."
+		//"baseUrl": "."
 	},
 	"ts-node": {
 		"compilerOptions": {
