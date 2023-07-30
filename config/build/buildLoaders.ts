@@ -1,3 +1,4 @@
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import webpack from 'webpack'
 /*в rules конфигурируем лодеры они предназначены для обработки файлов выходящих за рамки js(png, css, ts и т.д.) */
 
@@ -11,8 +12,7 @@ export const builderLoaders = (): webpack.RuleSetRule[] => {
 	const cssLoader = {
 		test: /\.s[ac]ss$/i,
 		use: [
-			// Creates `style` nodes from JS strings
-			'style-loader',
+			MiniCssExtractPlugin.loader,
 			// Translates CSS into CommonJS
 			'css-loader',
 			// Compiles Sass to CSS
