@@ -1,8 +1,11 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import webpack from 'webpack'
+import { BuildOptions } from './types/config'
 /*в rules конфигурируем лодеры они предназначены для обработки файлов выходящих за рамки js(png, css, ts и т.д.) */
 
-export const builderLoaders = (): webpack.RuleSetRule[] => {
+export const builderLoaders = ({
+	isDev,
+}: BuildOptions): webpack.RuleSetRule[] => {
 	//порядок лодеров имеет значение, поэтому вносим их в переменную в опр. порядке
 	const typescriptLoader = {
 		test: /\.tsx?$/,
@@ -12,10 +15,17 @@ export const builderLoaders = (): webpack.RuleSetRule[] => {
 	const cssLoader = {
 		test: /\.s[ac]ss$/i,
 		use: [
-			MiniCssExtractPlugin.loader,
-			// Translates CSS into CommonJS
-			'css-loader',
-			// Compiles Sass to CSS
+			isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+			{
+				loader: 'css-loader',
+				options: {
+					modules: {
+						auto: (resPath: string) =>
+							Boolean(resPath.includes('.module.scss')),
+						localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]',
+					},
+				},
+			},
 			'sass-loader',
 		],
 	}
