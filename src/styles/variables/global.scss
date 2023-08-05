@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+	--font-family-main: 'DM Sans', 'Consolas', sans-serif;
+	--font-size-m: 16px;
+	--font-line-m: 24px;
+	--font-weight-m: 400;
+	--font-m: var(--font-weight-m) var(--font-size-m) / var(--font-line-m)
+		var(--font-family-main);
+
+	--font-size-l: 24px;
+	--font-line-l: 32px;
+	--font-weight-l: 700;
+	--font-l: var(--font-weight-l) var(--font-size-l) / var(--font-line-l)
+		var(--font-family-main);
+}
