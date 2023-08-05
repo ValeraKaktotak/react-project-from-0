@@ -11,10 +11,6 @@ interface MyComponentProps {
 const ThemeProvider: FC<MyComponentProps> = ({ children }) => {
 	const [theme, setTheme] = useState<Theme>(defaultTheme)
 
-	const toggleTheme = () => {
-		setTheme(theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
-	}
-
 	const themeProps = useMemo(
 		() => ({
 			theme,
