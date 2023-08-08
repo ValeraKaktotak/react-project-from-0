@@ -7,6 +7,20 @@ export const builderLoaders = ({
 	isDev,
 }: BuildOptions): webpack.RuleSetRule[] => {
 	//порядок лодеров имеет значение, поэтому вносим их в переменную в опр. порядке
+	const svgLoader = {
+		test: /\.svg$/i,
+		issuer: /\.[jt]sx?$/,
+		use: [{ loader: '@svgr/webpack', options: { icon: true } }],
+	}
+	const fileLoader = {
+		test: /\.(png|jpe?g|gif)$/i,
+		use: [
+			{
+				loader: 'file-loader',
+			},
+		],
+	}
+	//если не используем typescript то нужен babel
 	const typescriptLoader = {
 		test: /\.tsx?$/,
 		use: 'ts-loader',
@@ -29,5 +43,5 @@ export const builderLoaders = ({
 			'sass-loader',
 		],
 	}
-	return [typescriptLoader, cssLoader]
+	return [typescriptLoader, cssLoader, svgLoader, fileLoader]
 }

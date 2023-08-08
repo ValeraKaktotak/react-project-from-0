@@ -8,7 +8,7 @@ export enum AppThemeClass {
 	SECONDARY = 'secondary',
 }
 
-//добавляем пропсы то, чилдрен и т.д. для линка
+//добавляем пропсы to, children и т.д. для линка
 interface AppLinkProps extends LinkProps {
 	className?: string
 	theme?: AppThemeClass
