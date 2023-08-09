@@ -17,7 +17,7 @@ export const buildWebPackConfig = (
 			filename: '[name].[contenthash:8].js',
 			clean: true,
 		},
-		plugins: buildPlugins(paths),
+		plugins: buildPlugins(paths, isDev),
 		module: {
 			rules: builderLoaders(options),
 		},

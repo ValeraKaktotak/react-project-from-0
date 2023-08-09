@@ -4,7 +4,8 @@ import webpack from 'webpack'
 import { BuildPath } from './types/config'
 
 export const buildPlugins = (
-	path: BuildPath
+	path: BuildPath,
+	isDev: boolean
 ): webpack.WebpackPluginInstance[] => {
 	return [
 		new HtmlWebpackPlugin({
@@ -14,6 +15,10 @@ export const buildPlugins = (
 		new MiniCssExtractPlugin({
 			filename: 'css/[name].[contenthash:8].css',
 			chunkFilename: 'css/[name].[contenthash:8].css',
+		}),
+		//плагин для создания глобальных переменных, доступный в приложении
+		new webpack.DefinePlugin({
+			__IS_DEV__: JSON.stringify(isDev),
 		}),
 	]
 }
