@@ -12,19 +12,16 @@ interface ThemeSwitcherProps {
 
 export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
 	const { theme: currentTheme, toggleTheme } = useTheme()
-	console.log(currentTheme)
 	return (
 		<Button
 			className={classNames(styles.ThemeSwitcher, {}, [className])}
 			onClick={toggleTheme}
 			theme={ThemeButton.CLEAR}>
-			{currentTheme === Theme.DARK
-				? (
-					<DarkIcon width='40px' height='40px' />
-				)
-				: (
-					<LightIcon width='40px' height='40px' />
-				)}
+			{currentTheme === Theme.DARK ? (
+				<DarkIcon width='40px' height='40px' />
+			) : (
+				<LightIcon width='40px' height='40px' />
+			)}
 		</Button>
 	)
 }

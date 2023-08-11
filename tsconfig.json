@@ -1,6 +1,5 @@
 {
 	"compilerOptions": {
-		"strictNullChecks": true,
 		//в нашем случае мы собираем с помощью вебпака(эта настройка не нужна)
 		"outDir": "./dist/",
 		/*
