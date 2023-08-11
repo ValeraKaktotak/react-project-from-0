@@ -1,12 +1,12 @@
 import { useTheme } from 'app/providers/ThemeProvider'
 import 'app/styles/index.scss'
-import { Suspense } from 'react'
+import { type FC, Suspense } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
 import { AppRouter } from './providers/AppRouter'
 
-const App = () => {
+const App: FC = () => {
 	const { theme } = useTheme()
 
 	return (

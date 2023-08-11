@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { type FC, useState } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { LanguagesSwitcher } from 'shared/ui/LanguagesSwitcher'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
@@ -17,7 +17,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 	return (
 		<div
 			className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [
-				className,
+				className
 			])}>
 			<button onClick={onToggle}>toggle</button>
 			<div className={styles.switchers}>
