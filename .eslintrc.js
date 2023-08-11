@@ -41,4 +41,5 @@ module.exports = {
 		},
 	},
 	parser: '@typescript-eslint/parser',
+	ignorePatterns: ['.eslintrc.js'],
 }
