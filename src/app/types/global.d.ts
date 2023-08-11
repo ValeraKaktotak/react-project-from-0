@@ -1,7 +1,5 @@
 declare module '*.scss' {
-	interface IClassNames {
-		[className: string]: string
-	}
+	type IClassNames = Record<string, string>
 	const classNames: IClassNames
 	export = classNames
 }
@@ -21,4 +19,4 @@ declare module '*.jpeg' {
 	const value: any
 	export = value
 }
-declare var __IS_DEV__: boolean
+declare let __IS_DEV__: boolean
