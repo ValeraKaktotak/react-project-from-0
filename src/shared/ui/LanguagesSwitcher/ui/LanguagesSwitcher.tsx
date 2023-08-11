@@ -14,16 +14,13 @@ export const LanguagesSwitcher: FC<LanguagesSwitcherProps> = ({
 	const { t, i18n } = useTranslation()
 
 	const changeLanguage = () => {
-		// eslint-disable-next-line @typescript-eslint/no-floating-promises
 		i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en')
 	}
 	return (
 		<Button
 			onClick={changeLanguage}
 			theme={ThemeButton.CLEAR}
-			className={classNames(styles.LanguagesSwitcher, {}, [
-				className ? className : '',
-			])}>
+			className={classNames(styles.LanguagesSwitcher, {}, [className])}>
 			{t('Language')}
 		</Button>
 	)
