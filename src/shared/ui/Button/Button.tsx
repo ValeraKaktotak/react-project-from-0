@@ -4,6 +4,7 @@ import styles from './Button.module.scss'
 
 export enum ThemeButton {
 	CLEAR = 'clear',
+	ERROR = 'error',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
