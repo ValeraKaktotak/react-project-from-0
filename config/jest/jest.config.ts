@@ -21,6 +21,7 @@ export default {
 	moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
 	rootDir: '../../',
 	testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)'],
+	modulePaths: ['<rootDir>/src'],
 
 	// Indicates whether the coverage information should be collected while executing the test
 	// collectCoverage: false,
