@@ -1,5 +1,9 @@
 .Button {
 	cursor: pointer;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	background: none;
 }
 .Button:active {
 	position: relative;
@@ -7,16 +11,16 @@
 	left: 1px;
 }
 .clear {
-	padding: 0;
-	margin: 0;
-	border: none;
+	border: 1px solid var(--inverted-primary-color);
+	color: var(--inverted-primary-color);
 	background: none;
 	outline: none;
 }
 .error {
-	padding: 5px;
-	margin: 5px;
 	border: 1px solid red;
-	border-radius: 5px;
 	color: red;
+}
+.outline {
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color);
 }
