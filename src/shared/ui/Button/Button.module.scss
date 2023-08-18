@@ -11,14 +11,14 @@
 	left: 1px;
 }
 .clear {
-	border: 1px solid var(--inverted-primary-color);
-	color: var(--inverted-primary-color);
+	color: var(--primary-color);
 	background: none;
 	outline: none;
 }
 .error {
 	border: 1px solid red;
 	color: red;
+	background: #f7eeee;
 }
 .outline {
 	border: 1px solid var(--primary-color);
