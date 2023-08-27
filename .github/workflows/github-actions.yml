@@ -1,4 +1,4 @@
-name: linting, testing, building
+name: testing and building
 on:
   push:
     branches: [master]
@@ -26,4 +26,4 @@ jobs:
       - name: build storybook
         run: npm run storybook:build
       - name: screenshot testing
-        run: npm run loki --requireReference --reactUri file:./storybook-static
+        run: npm run test:ui:ci
