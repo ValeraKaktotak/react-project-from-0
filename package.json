@@ -9,7 +9,7 @@
 		"build:dev": "webpack --env mode=development",
 		"test:unit": "jest --config ./config/jest/jest.config.ts",
 		"test:ui": "npx loki test",
-		"test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
+		"test:ui:ci": "concurrently --kill-others --raw --success first \"npm run storybook\" \"npm run test:ui\"\"deelay\"",
 		"storybook": "storybook dev -p 6006 -c ./config/storybook",
 		"storybook:build": "storybook build -c ./config/storybook"
 	},
@@ -60,6 +60,8 @@
 	"dependencies": {
 		"@types/webpack-dev-server": "^4.7.2",
 		"aws-sdk": "^2.1445.0",
+		"concurrently": "^8.2.1",
+		"deelay": "^2.0.0",
 		"i18next": "^23.4.3",
 		"i18next-browser-languagedetector": "^7.1.0",
 		"i18next-http-backend": "^2.2.1",
