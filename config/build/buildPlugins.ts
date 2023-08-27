@@ -8,7 +8,7 @@ export const buildPlugins = (
 	path: BuildPath,
 	isDev: boolean
 ): webpack.WebpackPluginInstance[] => {
-	return [
+	const plugins = [
 		new HtmlWebpackPlugin({
 			template: path.html,
 		}),
@@ -21,8 +21,13 @@ export const buildPlugins = (
 		new webpack.DefinePlugin({
 			__IS_DEV__: JSON.stringify(isDev),
 		}),
-		new BundleAnalyzerPlugin({
-			openAnalyzer: false,
-		}),
 	]
+	if (isDev) {
+		plugins.push(
+			new BundleAnalyzerPlugin({
+				openAnalyzer: false,
+			})
+		)
+	}
+	return plugins
 }
