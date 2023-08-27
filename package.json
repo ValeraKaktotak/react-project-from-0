@@ -59,6 +59,7 @@
 	},
 	"dependencies": {
 		"@types/webpack-dev-server": "^4.7.2",
+		"aws-sdk": "^2.1445.0",
 		"i18next": "^23.4.3",
 		"i18next-browser-languagedetector": "^7.1.0",
 		"i18next-http-backend": "^2.2.1",
