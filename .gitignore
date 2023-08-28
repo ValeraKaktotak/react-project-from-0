@@ -11,7 +11,7 @@
 /storybook-static
 
 # time ti fix
-.github
+/.github
 
 # misc
 .DS_Store
