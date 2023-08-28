@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import { Link, LinkProps } from 'react-router-dom'
+import { type FC } from 'react'
+import { Link, type LinkProps } from 'react-router-dom'
 import { classNames } from 'shared/lib/classNames/classNames'
 import styles from './AppLink.module.scss'
 
@@ -8,7 +8,7 @@ export enum AppThemeClass {
 	SECONDARY = 'secondary',
 }
 
-//добавляем пропсы to, children и т.д. для линка
+// добавляем пропсы to, children и т.д. для линка
 interface AppLinkProps extends LinkProps {
 	className?: string
 	theme?: AppThemeClass

@@ -14,4 +14,4 @@ export function classNames(
 	].join(' ')
 }
 
-//classNames('remove-btn', { hovered: false, select: true }, ['pdg'])
+// classNames('remove-btn', { hovered: false, select: true }, ['pdg'])

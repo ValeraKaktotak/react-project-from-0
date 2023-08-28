@@ -8,6 +8,10 @@
 
 # production
 /build
+/storybook-static
+
+# time ti fix
+.github
 
 # misc
 .DS_Store

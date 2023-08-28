@@ -19,7 +19,7 @@
 		"moduleResolution": "node",
 		/*
 		Если какая-либо библиотека не имеет default import,
-    лоадеры вроде ts-loader или babel-loader автоматически создают их
+    лодеры вроде ts-loader или babel-loader автоматически создают их
     вместо такого импорта
     import * as React from 'react';
     можно писать такой
@@ -38,5 +38,6 @@
 		"compilerOptions": {
 			"module": "CommonJS"
 		}
-	}
+	},
+	"include": ["src/**/*", "./config/jest/setupTests.ts"]
 }
