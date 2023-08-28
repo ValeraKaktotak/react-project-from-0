@@ -13,7 +13,6 @@
 	position: relative;
 	transition: max-width 0.4s;
 }
-
 .collapsed {
 	width: 100%;
 	max-width: var(--sidebar-width-collapsed);
@@ -28,4 +27,12 @@
 
 	position: absolute;
 	bottom: 20px;
+}
+
+.collapseBtn {
+	color: var(--primary-color);
+	border-color: var(--primary-color);
+	position: absolute;
+	bottom: 40px;
+	right: -40px;
 }
