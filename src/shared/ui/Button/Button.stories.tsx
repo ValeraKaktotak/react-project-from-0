@@ -52,3 +52,21 @@ export const ErrorDark: Story = {
 	},
 	decorators: [ThemeDecorator(Theme.DARK)],
 }
+export const Background: Story = {
+	args: {
+		children: 'Text',
+		background: ThemeButton.BACKGROUND,
+	},
+}
+export const BackgroundInverted: Story = {
+	args: {
+		children: 'Text',
+		background: ThemeButton.BACKGROUND_INVERTED,
+	},
+}
+export const RoundBorder: Story = {
+	args: {
+		children: '>',
+		round: true,
+	},
+}
