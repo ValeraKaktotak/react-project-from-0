@@ -25,7 +25,8 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 				className={styles.collapseBtn}
 				theme={ThemeButton.CLEAR}
 				data-testid='sidebar-toggle'
-				onClick={onToggle}>
+				onClick={onToggle}
+				round>
 				{collapsed ? '<' : '>'}
 			</Button>
 			<div className={styles.switchers}>
