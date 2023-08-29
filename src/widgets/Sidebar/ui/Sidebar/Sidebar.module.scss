@@ -11,11 +11,37 @@
 	color: var(--inverted-primary-color);
 
 	position: relative;
-	transition: max-width 0.4s;
+	//transition: max-width 0.4s;
+}
+.links {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+}
+.link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	flex-wrap: wrap;
+	span {
+		display: none;
+	}
+	.icon {
+		display: flex;
+	}
+	svg {
+		width: 30px;
+		height: 30px;
+		fill: var(--inverted-primary-color);
+	}
 }
 .collapsed {
 	width: 100%;
 	max-width: var(--sidebar-width-collapsed);
+	span {
+		display: flex;
+	}
 }
 .switchers {
 	display: flex;
