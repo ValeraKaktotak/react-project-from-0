@@ -23,6 +23,6 @@ describe('classNames', () => {
 				'class1',
 				'class2',
 			])
-		).toBe('someClasses class1 class2 firstKey')
+		).toBe('someClasses firstKey class1 class2')
 	})
 })
