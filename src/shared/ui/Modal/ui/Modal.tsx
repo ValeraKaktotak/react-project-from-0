@@ -8,6 +8,7 @@ import {
 	useState,
 } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
+import { Portal } from 'shared/ui/Portal/Portal'
 import styles from './Modal.module.scss'
 
 interface ModalProps {
@@ -24,7 +25,7 @@ export const Modal: FC<ModalProps> = (props) => {
 	const [isClosing, setClosing] = useState<boolean>(false)
 	const timerRef = useRef<ReturnType<typeof setTimeout>>()
 
-	const closeModal = () => {
+	const closeModal = useCallback(() => {
 		if (isClose) {
 			setClosing(true)
 			timerRef.current = setTimeout(() => {
@@ -32,7 +33,7 @@ export const Modal: FC<ModalProps> = (props) => {
 				setClosing(false)
 			}, ANIMATION_DELAY)
 		}
-	}
+	}, [isClose])
 
 	const clickHandler = useCallback(
 		(e: MouseEvent) => {
@@ -65,12 +66,14 @@ export const Modal: FC<ModalProps> = (props) => {
 		[styles.closingModal]: isClosing,
 	}
 	return (
-		<div className={classNames(styles.Modal, mods, [className])}>
-			<div className={styles.overlay} onClick={closeModal}>
-				<div className={styles.content} onClick={clickHandler}>
-					{children}
+		<Portal>
+			<div className={classNames(styles.Modal, mods, [className])}>
+				<div className={styles.overlay} onClick={closeModal}>
+					<div className={styles.content} onClick={clickHandler}>
+						{children}
+					</div>
 				</div>
 			</div>
-		</div>
+		</Portal>
 	)
 }
