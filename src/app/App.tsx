@@ -1,5 +1,4 @@
 import { useTheme } from 'app/providers/ThemeProvider'
-import 'app/styles/index.scss'
 import { Suspense, useState, type FC } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button } from 'shared/ui/Button/Button'
