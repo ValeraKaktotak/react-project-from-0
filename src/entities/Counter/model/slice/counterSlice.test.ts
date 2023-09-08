@@ -17,5 +17,15 @@ describe('counterSlice.test', () => {
 			expect(counterReducer(state, counterActions.increment())).toEqual({
 				value: 11,
 			})
+		}),
+		test('increment with default state', () => {
+			expect(counterReducer(undefined, counterActions.increment())).toEqual({
+				value: 1,
+			})
+		}),
+		test('decrement with default state', () => {
+			expect(counterReducer(undefined, counterActions.decrement())).toEqual({
+				value: -1,
+			})
 		})
 })
