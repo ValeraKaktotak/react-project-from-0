@@ -1,4 +1,3 @@
-import { useTheme } from 'app/providers/ThemeProvider'
 import { Suspense, type FC } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Loader } from 'shared/ui/Loader'
@@ -7,10 +6,8 @@ import { Sidebar } from 'widgets/Sidebar'
 import { AppRouter } from './providers/AppRouter'
 
 const App: FC = () => {
-	const { theme } = useTheme()
-
 	return (
-		<div className={classNames('app', {}, [theme])}>
+		<div className={classNames('app')}>
 			<Suspense fallback={<Loader />}>
 				<Navbar />
 				<div className='app-container'>
