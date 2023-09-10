@@ -5,5 +5,8 @@
 	"Something went wrong!!!": "Something went wrong!!!",
 	"Reload page": "Reload page",
 	"Language last": "EN",
-	"Login": "Login"
+	"Login": "Login",
+	"value": "value",
+	"increment": "increment",
+	"decrement": "decrement"
 }

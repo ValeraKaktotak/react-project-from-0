@@ -5,5 +5,8 @@
 	"Something went wrong!!!": "Что-то пошло не так!!!",
 	"Reload page": "Обновить страницу",
 	"Language last": "RU",
-	"Login": "Войти"
+	"Login": "Войти",
+	"value": "значение",
+	"increment": "инкремент",
+	"decrement": "декремент"
 }
