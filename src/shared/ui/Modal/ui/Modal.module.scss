@@ -19,10 +19,12 @@
 .content {
 	padding: 20px;
 	background: var(--bg-color);
+	color: var(--primary-color);
 	border-radius: 10px;
 	max-width: 50%;
 	transform: scale(0.3);
 	transition: 0.3s transform;
+	background: var(--bg-color);
 }
 .opened {
 	z-index: var(--modal-z-index);
