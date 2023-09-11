@@ -1,4 +1,3 @@
-import { useTheme } from 'app/providers/ThemeProvider'
 import {
 	FC,
 	MouseEvent,
@@ -25,7 +24,6 @@ export const Modal: FC<ModalProps> = (props) => {
 
 	const [isClosing, setClosing] = useState<boolean>(false)
 	const timerRef = useRef<ReturnType<typeof setTimeout>>()
-	const { theme } = useTheme()
 
 	const closeModal = useCallback(() => {
 		if (isClose) {
