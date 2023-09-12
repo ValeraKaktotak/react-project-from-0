@@ -1,6 +1,8 @@
 .Input {
 	display: flex;
 	align-items: center;
+	width: 100%;
+	max-width: 340px;
 	border: 1px solid var(--primary-color);
 	border-radius: 5px;
 	margin: 5px;
