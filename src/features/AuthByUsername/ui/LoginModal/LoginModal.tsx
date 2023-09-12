@@ -15,9 +15,9 @@ export const LoginModal: FC<LoginModalProps> = ({
 	isClose,
 	isOpen,
 }) => {
-	console.log(isOpen, isClose)
 	return (
 		<Modal
+			lazy
 			isOpen={isOpen}
 			isClose={isClose}
 			className={classNames(styles.LoginModal, {}, [className])}>
