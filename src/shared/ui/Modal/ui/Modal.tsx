@@ -1,4 +1,3 @@
-import { useTheme } from 'app/providers/ThemeProvider'
 import {
 	FC,
 	MouseEvent,
@@ -17,15 +16,16 @@ interface ModalProps {
 	children?: ReactNode
 	isOpen?: boolean
 	isClose?: () => void
+	lazy?: boolean
 }
 const ANIMATION_DELAY = 200
 
 export const Modal: FC<ModalProps> = (props) => {
-	const { children, className, isClose, isOpen } = props
+	const { children, className, isClose, isOpen, lazy } = props
 
 	const [isClosing, setClosing] = useState<boolean>(false)
+	const [isMounted, setIsMounted] = useState(false)
 	const timerRef = useRef<ReturnType<typeof setTimeout>>()
-	const { theme } = useTheme()
 
 	const closeModal = useCallback(() => {
 		if (isClose) {
@@ -33,6 +33,7 @@ export const Modal: FC<ModalProps> = (props) => {
 			timerRef.current = setTimeout(() => {
 				isClose()
 				setClosing(false)
+				setIsMounted(false)
 			}, ANIMATION_DELAY)
 		}
 	}, [isClose])
@@ -55,6 +56,12 @@ export const Modal: FC<ModalProps> = (props) => {
 
 	useEffect(() => {
 		if (isOpen) {
+			setIsMounted(true)
+		}
+	}, [isOpen])
+
+	useEffect(() => {
+		if (isOpen) {
 			window.addEventListener('keydown', onKeyDown)
 		}
 		return () => {
@@ -66,6 +73,10 @@ export const Modal: FC<ModalProps> = (props) => {
 	const mods: Record<string, boolean> = {
 		[styles.opened]: isOpen,
 		[styles.closingModal]: isClosing,
+	}
+
+	if (lazy && !isMounted) {
+		return null
 	}
 	return (
 		<Portal>
