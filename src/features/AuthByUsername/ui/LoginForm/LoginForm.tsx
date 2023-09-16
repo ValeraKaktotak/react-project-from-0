@@ -37,6 +37,7 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
 
 	return (
 		<div className={classNames(styles.LoginForm, {}, [className])}>
+			{error && <div>{error}</div>}
 			<Input
 				type="text"
 				value={username}
@@ -50,7 +51,11 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
 				onChange={onChangeUserPassword}
 				placeholder={t('Enter password >')}
 			/>
-			<Button theme={ThemeButton.OUTLINE} onClick={onLoginClick}>
+			<Button
+				theme={ThemeButton.OUTLINE}
+				onClick={onLoginClick}
+				disabled={isLoading}
+			>
 				{t('Enter')}
 			</Button>
 		</div>

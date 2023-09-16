@@ -41,6 +41,7 @@ export const Button: FC<ButtonProps> = (props) => {
 				styles[theme],
 				styles[background]
 			])}
+			disabled={disabled}
 			{...otherProps}
 		>
 			{children}
