@@ -3,13 +3,13 @@ import { LoginForm } from './LoginForm'
 
 const meta = {
 	title: 'features/LoginForm',
-	component: LoginForm,
+	component: LoginForm
 } satisfies Meta<typeof LoginForm>
 
 export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const OutlineLight: Story = {
-	args: {},
+export const Login: Story = {
+	args: {}
 }

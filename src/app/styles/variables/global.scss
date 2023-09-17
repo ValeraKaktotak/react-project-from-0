@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
 :root {
-	--font-family-main: 'DM Sans', 'Consolas', sans-serif;
-	--font-size-m: 16px;
-	--font-line-m: 24px;
-	--font-weight-m: 400;
-	--font-m: var(--font-weight-m) var(--font-size-m) / var(--font-line-m)
-		var(--font-family-main);
+  --font-family-main: 'DM Sans', 'Consolas', sans-serif;
+  --font-size-m: 16px;
+  --font-line-m: 24px;
+  --font-weight-m: 400;
+  --font-m: var(--font-weight-m) var(--font-size-m) / var(--font-line-m) var(--font-family-main);
 
-	--font-size-l: 24px;
-	--font-line-l: 32px;
-	--font-weight-l: 700;
-	--font-l: var(--font-weight-l) var(--font-size-l) / var(--font-line-l)
-		var(--font-family-main);
+  --font-size-l: 24px;
+  --font-line-l: 32px;
+  --font-weight-l: 700;
+  --font-l: var(--font-weight-l) var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
-	//Размеры
-	--sidebar-width-collapsed: 300px;
-	--sidebar-width: 90px;
-	--navbar-height: 64px;
+  //Размеры
+  --sidebar-width-collapsed: 300px;
+  --sidebar-width: 90px;
+  --navbar-height: 64px;
 
-	//z- индексы
-	--modal-z-index: 10;
+  //z- индексы
+  --modal-z-index: 10;
 
-	// цвета
-	--overlay-color: rgba(0 0 0 / 60%);
+  // цвета
+  --overlay-color: rgba(0 0 0 / 60%);
+  --red-light: #ec4b4b;
+  --red-dark: #ff0000;
 }

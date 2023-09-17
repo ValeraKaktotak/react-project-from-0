@@ -7,3 +7,13 @@
   color: var(--secondary-color);
   font: var(--font-m);
 }
+
+.error {
+  .title {
+    color: var(--red-dark);
+  }
+
+  .text {
+    color: var(--red-light);
+  }
+}
