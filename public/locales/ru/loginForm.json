@@ -1,5 +1,6 @@
 {
-	"Enter": "Войти",
-	"Enter password >": "Введите пароль >",
-	"Enter login >": "Введите логин >"
+  "Enter": "Войти",
+  "Enter password >": "Введите пароль >",
+  "Enter login >": "Введите логин >",
+  "Authorization form": "Форма авторизации"
 }

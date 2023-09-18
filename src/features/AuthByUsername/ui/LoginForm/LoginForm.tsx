@@ -9,6 +9,7 @@ import { loginActions } from '../../model/slice/loginSlice'
 import { getUserLogin } from '../../model/selectors/getLoginState/getLoginState'
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername'
 import { AppDispatch } from 'app/providers/StoreProvider/config/store'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
 
 interface LoginFormProps {
 	className?: string
@@ -37,7 +38,8 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
 
 	return (
 		<div className={classNames(styles.LoginForm, {}, [className])}>
-			{error && <div>{error}</div>}
+			<Text title={t('Authorization form')} />
+			{error && <Text theme={TextTheme.ERROR} title="Error" text={error} />}
 			<Input
 				type="text"
 				value={username}
