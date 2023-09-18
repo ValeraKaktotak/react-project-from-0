@@ -22,3 +22,27 @@ export const Login: Story = {
 		})
 	]
 }
+export const ErrorLogin: Story = {
+	args: {},
+	decorators: [
+		StoreDecorator({
+			login: {
+				username: 'Victor',
+				password: 'asd',
+				error: 'SOME ERROR'
+			}
+		})
+	]
+}
+export const LoadingLogin: Story = {
+	args: {},
+	decorators: [
+		StoreDecorator({
+			login: {
+				username: 'Victor',
+				password: 'asd',
+				isLoading: true
+			}
+		})
+	]
+}
