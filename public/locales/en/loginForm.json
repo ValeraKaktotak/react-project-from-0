@@ -1,5 +1,6 @@
 {
-	"Enter": "Enter",
-	"Enter password >": "Enter password >",
-	"Enter login >": "Enter login >"
+  "Enter": "Enter",
+  "Enter password >": "Enter password >",
+  "Enter login >": "Enter login >",
+  "Authorization form": "Authorization form"
 }

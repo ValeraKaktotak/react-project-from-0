@@ -1,43 +1,53 @@
 .Button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	border-radius: 5px;
-	padding: 5px;
-	margin: 5px;
-	background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; //color: var(--inverted-primary-color);
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  background: none;
 }
+
 // .Button:active {
 // 	position: relative;
 // 	top: 1px;
 // 	left: 1px;
 // }
 .clear {
-	color: var(--inverted-primary-color);
-	border: 1px solid var(--inverted-primary-color);
-	background: none;
-	outline: none;
+  color: var(--inverted-primary-color);
+  border: 1px solid var(--inverted-primary-color);
+  background: none;
+  outline: none;
 }
+
 .round {
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
+
 .background {
-	color: var(--primary-color);
-	background: var(--bg-color);
+  color: var(--primary-color);
+  background: var(--bg-color);
 }
+
 .backgroundInverted {
-	color: var(--inverted-primary-color);
-	background: var(--inverted-bg-color);
+  color: var(--inverted-primary-color);
+  background: var(--inverted-bg-color);
 }
+
 .error {
-	border: 1px solid red;
-	color: red;
-	background: #f7eeee;
+  border: 1px solid red;
+  color: red;
+  background: #f7eeee;
 }
+
 .outline {
-	border: 1px solid var(--primary-color);
-	color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.disabled {
+  opacity: 0.5;
 }

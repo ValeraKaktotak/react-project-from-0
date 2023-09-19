@@ -8,7 +8,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
 		build: '',
 		entry: '',
 		html: '',
-		src: path.resolve(__dirname, '../', '../', 'src'),
+		src: path.resolve(__dirname, '../', '../', 'src')
 	}
 	config.resolve?.modules?.push(paths.src)
 	config.resolve?.extensions?.push('.ts', '.tsx')
@@ -28,8 +28,14 @@ export default ({ config }: { config: webpack.Configuration }) => {
 	config.module?.rules?.push({
 		test: /\.svg$/i,
 		issuer: /\.[jt]sx?$/,
-		use: [{ loader: '@svgr/webpack', options: { icon: true } }],
+		use: [{ loader: '@svgr/webpack', options: { icon: true } }]
 	})
+
+	config.plugins.push(
+		new webpack.DefinePlugin({
+			__IS_DEV__: true
+		})
+	)
 
 	return config
 }
